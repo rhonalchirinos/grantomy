@@ -1,0 +1,21 @@
+{% extends 'pretixcontrol/organizers/base.html' %}
+{% load i18n %}
+{% load bootstrap3 %}
+{% block title %}
+  {% trans 'Customers' %}
+{% endblock %}
+{% block inner %}
+  <h1>New Customer</h1>
+
+  <form class="form-horizontal" action="" method="post">
+    <!-- Security token -->
+    {% csrf_token %}
+
+    <!-- Using the formset -->
+    {% bootstrap_form form layout='control' %}
+
+    <div class="form-group submit-group">
+      <button type="submit" class="btn btn-primary btn-save">{% trans 'Save' %}</button>
+    </div>
+  </form>
+{% endblock %}

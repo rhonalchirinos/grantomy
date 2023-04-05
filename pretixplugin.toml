@@ -1,0 +1,5 @@
+[plugin]
+package = "grantomy"
+modules = [ "grantomy" ]
+marketplace_name = "grantomy"
+
